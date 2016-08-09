@@ -32,7 +32,7 @@ augroup Filetype
 	au BufRead,BufNewFile	*.cl						set filetype=opencl
 	au BufRead,BufNewFile	*.{dat,data,csv}			set filetype=csv
 	au BufRead,BufNewFile	*.gdb						set filetype=gdb
-	au BufRead,BufNewFile	*.python					set filetype=python
+       	au BufRead,BufNewFile	*.python					set filetype=python
 	au BufRead,BufNewFile	*.bb						set filetype=sh
 	au BufRead,BufNewFile	*.bbclass					set filetype=python
 	au BufRead,BufNewFile	*.isa						set filetype=cpp 
@@ -42,16 +42,17 @@ augroup Filetype
 augroup END
 
 set number
-set autoindent 
 set cindent
 set laststatus=2
 set hlsearch
 set cursorline
 set ts=4
 set shiftwidth=4
-"set mouse=a
+set expandtab
+set mouse=a
 syntax enable
 colorscheme wombat256
+
 "colorscheme default
 au BufRead *
             \ if &filetype != 'svn' && line("'\"") > 0 && line("'\"") <= line("$") |
@@ -70,3 +71,11 @@ set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/riscv/lua-5.3.0/sr
 set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/ASPLOS2016/riscv/lua-5.3.0/src/tags
 set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/trunks/typedisa/gem5/src/cpu/minor/tags
 set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/ASPLOS2016/riscv/mozjs17.0.0/js/src/tags
+set tags+=/home/gimnamho/Projects/rocket-chip/riscv-tools/riscv-pk/pk/tags
+"set tags+=/home/gimnamho/Projects/ruby-2.3.1/tags
+"set tags+=/home/gimnamho/Projects/php-5.6.24/main/tags
+"set tags+=/home/gimnamho/Projects/php-5.6.24/Zend/tags
+set tags+=/home/gimnamho/Projects/rocket-chip/riscv-tools/riscv-isa-sim/riscv/tags
+set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/ASPLOS2016/rocket-chip/rocket/src/main/scala/tags
+set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/ASPLOS2016/checkedload/rocket-chip/rocket/src/main/scala/tags
+

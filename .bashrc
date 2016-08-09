@@ -122,9 +122,10 @@ BASE16_SHELL="$HOME/.config/base16-shell/base16-isotope.dark.sh"
 
 # export GEM5=$BRANCH/../isa_trial/gem5
 alias gem5alpha="$GEM5/build/ALPHA/gem5.opt $GEM5/configs/example/se.py --cpu-type=MinorCPU --caches --l2cache --l1i_size='16kB' --l1i_assoc=2 --l1d_size='32kB' --l1d_assoc=4 --l2_size='128kB' --l2_assoc=8"
-export BRANCH=~/PAPL_SVN/projects/typedarch/branches/namho/RISC_V
+export BRANCH=~/PAPL_SVN/projects/typedarch/branches/namho/ASPLOS2016
 #export RISCV=~/Projects/ASPLOS2016/rocket-chip/riscv-tools/riscv
-export RISCV=/home/gimnamho/Projects/rocket-chip/riscv
+export RISCV=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/ASPLOS2016/rocket-chip/riscv
+#export RISCV=~/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/ASPLOS2016/checkedload/rocket-chip/riscv  
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 export PATH=$PATH:$RISCV/bin
 #export PATH=$PATH:/opt/riscv/bin
