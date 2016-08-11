@@ -50,6 +50,8 @@ set ts=4
 set shiftwidth=4
 set expandtab
 set mouse=a
+set tags+=./tags;$HOME
+
 syntax enable
 colorscheme wombat256
 
@@ -58,24 +60,25 @@ au BufRead *
             \ if &filetype != 'svn' && line("'\"") > 0 && line("'\"") <= line("$") |
             \    exe "norm g'\"" |
             \ endif
-set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/trunks/typedisa/lua-5.3.0/tags
-set tags+=/home/gimnamho/Simulation_Modeling_and_Analysis/Chapter2Programs/tags
-set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/typedisa/lua-5.3.0/src/tags
-set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/typedisa/gem5/src/tags
-set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/baseline/Python-2.7.2/tags
-set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/isca2016_jrop/Python-2.7.2/tags
-set tags+=/home/gimnamho/Projects/ruby-2.3.1/tags
-set tags+=/home/gimnamho/Projects/perl-5.24.0
-set tags+=/home/gimnamho/Simulation_Modeling_and_Analysis/sim_fin/tags
-set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/riscv/lua-5.3.0/src/tags
-set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/ASPLOS2016/riscv/lua-5.3.0/src/tags
-set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/trunks/typedisa/gem5/src/cpu/minor/tags
-set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/ASPLOS2016/riscv/mozjs17.0.0/js/src/tags
-set tags+=/home/gimnamho/Projects/rocket-chip/riscv-tools/riscv-pk/pk/tags
+
+"set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/trunks/typedisa/lua-5.3.0/tags
+"set tags+=/home/gimnamho/Simulation_Modeling_and_Analysis/Chapter2Programs/tags
+"set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/typedisa/lua-5.3.0/src/tags
+"set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/typedisa/gem5/src/tags
+"set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/baseline/Python-2.7.2/tags
+"set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/isca2016_jrop/Python-2.7.2/tags
+"set tags+=/home/gimnamho/Projects/ruby-2.3.1/tags
+"set tags+=/home/gimnamho/Projects/perl-5.24.0
+"set tags+=/home/gimnamho/Simulation_Modeling_and_Analysis/sim_fin/tags
+"set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/riscv/lua-5.3.0/src/tags
+"set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/ASPLOS2016/riscv/lua-5.3.0/src/tags
+"set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/trunks/typedisa/gem5/src/cpu/minor/tags
+"set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/ASPLOS2016/riscv/mozjs17.0.0/js/src/tags
+"set tags+=/home/gimnamho/Projects/rocket-chip/riscv-tools/riscv-pk/pk/tags
 "set tags+=/home/gimnamho/Projects/ruby-2.3.1/tags
 "set tags+=/home/gimnamho/Projects/php-5.6.24/main/tags
 "set tags+=/home/gimnamho/Projects/php-5.6.24/Zend/tags
-set tags+=/home/gimnamho/Projects/rocket-chip/riscv-tools/riscv-isa-sim/riscv/tags
-set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/ASPLOS2016/rocket-chip/rocket/src/main/scala/tags
-set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/ASPLOS2016/checkedload/rocket-chip/rocket/src/main/scala/tags
-
+"set tags+=/home/gimnamho/Projects/rocket-chip/riscv-tools/riscv-isa-sim/riscv/tags
+"set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/ASPLOS2016/rocket-chip/rocket/src/main/scala/tags
+"set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/ASPLOS2016/checkedload/rocket-chip/rocket/src/main/scala/tags
+"set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/ASPLOS2016/checkedload/mozjs17.0.0/js/src/tags
