@@ -9,6 +9,9 @@ Bundle 'bling/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
 Bundle 'vim-scripts/SyntaxRange'
 Bundle 'flazz/vim-colorschemes'
+Bundle 'derekwyatt/vim-scala'
+Bundle 'will133/vim-dirdiff'
+
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#whitespace#enabled = 0
@@ -32,7 +35,7 @@ augroup Filetype
 	au BufRead,BufNewFile	*.cl						set filetype=opencl
 	au BufRead,BufNewFile	*.{dat,data,csv}			set filetype=csv
 	au BufRead,BufNewFile	*.gdb						set filetype=gdb
-       	au BufRead,BufNewFile	*.python					set filetype=python
+   	au BufRead,BufNewFile	*.python					set filetype=python
 	au BufRead,BufNewFile	*.bb						set filetype=sh
 	au BufRead,BufNewFile	*.bbclass					set filetype=python
 	au BufRead,BufNewFile	*.isa						set filetype=cpp 
@@ -60,7 +63,7 @@ autocmd FileType text
     \ set ts=8
 
 set backspace=indent,eol,start
-set mouse=a
+set mouse=c
 set title
 set showcmd
 set nobackup
@@ -81,6 +84,12 @@ au BufRead *
             \ if &filetype != 'svn' && line("'\"") > 0 && line("'\"") <= line("$") |
             \    exe "norm g'\"" |
             \ endif
+
+let t:Comment="#"
+let t:Uncomment="#"
+let t:CommentEnd=''
+let t:UncommentEnd=''
+let t:Space=" "
 
 augroup AutoComment
     au!
@@ -111,24 +120,3 @@ augroup END
 if &diff
     set diffopt+=iwhite
 endif
-"set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/trunks/typedisa/lua-5.3.0/tags
-"set tags+=/home/gimnamho/Simulation_Modeling_and_Analysis/Chapter2Programs/tags
-"set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/typedisa/lua-5.3.0/src/tags
-"set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/typedisa/gem5/src/tags
-"set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/baseline/Python-2.7.2/tags
-"set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/isca2016_jrop/Python-2.7.2/tags
-"set tags+=/home/gimnamho/Projects/ruby-2.3.1/tags
-"set tags+=/home/gimnamho/Projects/perl-5.24.0
-"set tags+=/home/gimnamho/Simulation_Modeling_and_Analysis/sim_fin/tags
-"set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/riscv/lua-5.3.0/src/tags
-"set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/ASPLOS2016/riscv/lua-5.3.0/src/tags
-"set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/trunks/typedisa/gem5/src/cpu/minor/tags
-"set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/ASPLOS2016/riscv/mozjs17.0.0/js/src/tags
-"set tags+=/home/gimnamho/Projects/rocket-chip/riscv-tools/riscv-pk/pk/tags
-"set tags+=/home/gimnamho/Projects/ruby-2.3.1/tags
-"set tags+=/home/gimnamho/Projects/php-5.6.24/main/tags
-"set tags+=/home/gimnamho/Projects/php-5.6.24/Zend/tags
-"set tags+=/home/gimnamho/Projects/rocket-chip/riscv-tools/riscv-isa-sim/riscv/tags
-"set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/ASPLOS2016/rocket-chip/rocket/src/main/scala/tags
-"set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/ASPLOS2016/checkedload/rocket-chip/rocket/src/main/scala/tags
-"set tags+=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/ASPLOS2016/checkedload/mozjs17.0.0/js/src/tags
