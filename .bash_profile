@@ -46,6 +46,7 @@ if [[ "$HOSTNAME" == "gimnamho" ]]; then
     export PYTHONSTARTUP=~/.pythonrc
     export PYTHONPATH=
     export color_prompt=yes
+    #export COLORTERM=gnome-terminal
     # ~/.bashrc: executed by bash(1) for non-login shells.
     # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
     # for examples
@@ -105,7 +106,8 @@ if [[ "$HOSTNAME" == "gimnamho" ]]; then
     fi
 
     if [ "$color_prompt" = yes ]; then
-        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+        #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+        PS1='\e[3m\]\e[32m\]\e[4m\]\u@\h\e[0;00m\]:\e[24m\]\e[0;34m\]\e[3m\]\w \e[0;24m\]'
     else
         PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
     fi
@@ -163,9 +165,12 @@ fi
 
 	BASE16_SHELL="$HOME/.config/base16-shell/base16-isotope.dark.sh"
 	[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
-	export BRANCH=~/SVNARC/projects/typedarch/branches/namho/ASPLOS2017
-	export RISCV=/opt/riscv_chkld
-	#export RISCV=/opt/riscv4unified
+	#export BRANCH=~/SVNARC/projects/typedarch/branches/namho/ASPLOS2017
+    export MY=/home/gimnamho/SVNARC/projects/typedarch/branches/namho/7102_ORCIM
+    #export RISCV=/opt/riscv_chkld
+    #export RISCV=/opt/__test__
+    #export RISCV=/opt/riscv_base
+    export RISCV=/opt/riscv_typed
 	#export RISCV=/opt/riscv
 	#export RISCV=/opt/riscv4js_old
 	#export RISCV=/opt/riscv4lua
@@ -175,7 +180,7 @@ fi
 	export PATH=/opt/Xilinx/Vivado/2015.2/bin:$PATH
 	export PATH=/opt/Xilinx/SDK/2015.2/bin:$PATH
 	export PATH=/opt/Xilinx/SDK/2015.2/gnu/arm/lin/bin:$PATH
-	export PATH=/home/gimnamho/Downloads/Xilinx_Vivado_SDK_Lin_2015.2_0612_1/tps/lnx64/jre/bin:$PATH
+	export PATH=/home/gimnamho/Xilinx_Vivado_SDK_Lin_2015.2_0612_1/tps/lnx64/jre/bin:$PATH
 
 elif [[ "$HOSTNAME" == "gimnamho-mac.local" ]]; then
 	export CC=clang
