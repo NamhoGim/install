@@ -107,7 +107,7 @@ if [[ "$HOSTNAME" == "gimnamho" ]]; then
 
     if [ "$color_prompt" = yes ]; then
         #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-        PS1='\e[3m\]\e[32m\]\e[4m\]\u@\h\e[0;00m\]:\e[24m\]\e[0;34m\]\e[3m\]\w \e[0;24m\]'
+        PS1='\[\e[3m\]\[\e[32m\]\[\e[4m\]\u@\h\[\e[0;00m\]:\[\e[24m\]\[\e[0;34m\]\[\e[3m\]\w\[\e[0;24m\] '
     else
         PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
     fi
