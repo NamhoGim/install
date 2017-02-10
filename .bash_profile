@@ -8,6 +8,7 @@ export LC_MESSAGES=C
 export TERM=xterm-256color
 
 alias ll='ls -alt'
+alias lll='ls -luh'
 alias la='ls -A'
 alias l='ls -CF'
 alias vi='vim' 
@@ -195,18 +196,18 @@ elif [[ "$HOSTNAME" == "gimnamho-mac.local" ]]; then
 			ssh arcgate -L 2222:147.46.174.66:22 -L 1221:147.46.219.120:22 -f -N -M
 			SESS=$(ssh gimnamho.tunnel -t tmux ls | grep "windows")
 			if [[ $SESS == "" ]]; then
-				ssh -x gimnamho.tunnel -t 'tmux -CC'
+				ssh gimnamho.tunnel -t 'tmux -CC'
 			else
-				ssh -x gimnamho.tunnel -t 'tmux -CC attach -d'
+				ssh gimnamho.tunnel -t 'tmux -CC attach -d'
 			fi
 
 		else
 			echo "matched"
 			SESS=$(ssh gimnamho -t tmux ls | grep "windows")
 			if [[ $SESS == "" ]]; then
-				ssh -x gimnamho -t 'tmux -CC'
+				ssh gimnamho -t 'tmux -CC'
 			else
-				ssh -x gimnamho -t 'tmux -CC attach -d'
+				ssh gimnamho -t 'tmux -CC attach -d'
 			fi
 		fi
 }
