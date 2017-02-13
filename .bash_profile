@@ -167,6 +167,7 @@ fi
 	BASE16_SHELL="$HOME/.config/base16-shell/base16-isotope.dark.sh"
 	[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 	#export BRANCH=~/SVNARC/projects/typedarch/branches/namho/ASPLOS2017
+    export SR=svn+ssh://kkjknh2@147.46.219.120/SVN/svnroot/
     export MY=/home/gimnamho/SVNARC/projects/typedarch/branches/namho/7102_ORCIM
     #export RISCV=/opt/riscv_chkld
     #export RISCV=/opt/__test__
