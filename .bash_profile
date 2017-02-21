@@ -12,7 +12,7 @@ alias lll='ls -luh'
 alias la='ls -A'
 alias l='ls -CF'
 alias vi='vim' 
-alias grep="grep --exclude-dir='.svn' --exclude=tags --color=auto"
+#alias grep="grep --exclude-dir=.svn --exclude=tags --color=auto"
 
 #ubuntu
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
@@ -130,7 +130,8 @@ if [ -x /usr/bin/dircolors ]; then
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
-   #alias grep='grep --color=auto'
+    alias grep='grep --exclude-dir=.svn --exclude=tags --color=auto'
+    #alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
@@ -166,13 +167,18 @@ fi
 
 	BASE16_SHELL="$HOME/.config/base16-shell/base16-isotope.dark.sh"
 	[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+    #alias gem5arm="$GEM5/build/ARM/gem5.opt $GEM5/configs/example/se.py --cpu-type=MinorCPU --caches --l2cache --l1i_size='16kB' --l1i_assoc=2 --l1d_size='32kB' --l1d_assoc=4 --l2_size='128kB' --l2_assoc=8"
+    export BASS=/home/gimnamho/SVNARC/projects/typedarch/branches/namho/bass
+    export JSARM=/home/gimnamho/SVNARC/projects/typedarch/branches/namho/bass/mozjs17.0.0_ARM/js/src/arm
+    export GEM5=/home/gimnamho/SVNARC/projects/typedarch/branches/namho/bass/gem5
 	#export BRANCH=~/SVNARC/projects/typedarch/branches/namho/ASPLOS2017
     export SR=svn+ssh://kkjknh2@147.46.219.120/SVN/svnroot/
     export MY=/home/gimnamho/SVNARC/projects/typedarch/branches/namho/7102_ORCIM
     #export RISCV=/opt/riscv_chkld
     #export RISCV=/opt/__test__
     #export RISCV=/opt/riscv_base
-    export RISCV=/opt/riscv_typed
+    #export RISCV=/opt/riscv_typed
+    export RISCV=/opt/riscv_prop
 	#export RISCV=/opt/riscv
 	#export RISCV=/opt/riscv4js_old
 	#export RISCV=/opt/riscv4lua
@@ -183,7 +189,9 @@ fi
 	export PATH=/opt/Xilinx/SDK/2015.2/bin:$PATH
 	export PATH=/opt/Xilinx/SDK/2015.2/gnu/arm/lin/bin:$PATH
 	export PATH=/home/gimnamho/Xilinx_Vivado_SDK_Lin_2015.2_0612_1/tps/lnx64/jre/bin:$PATH
-
+    #export PATH=/home/gimnamho/gcc-linaro-4.9.4-2017.01-x86_64_aarch64-elf/aarch64-elf/bin:$PATH
+    #export PATH=/home/gimnamho/gcc-linaro-4.9.4-2017.01-x86_64_aarch64-elf/bin:$PATH
+    #export PATH=/home/gimnamho/sysroot-newlib-linaro-2016.11-aarch64-elf:$PATH
 elif [[ "$HOSTNAME" == "gimnamho-mac.local" ]]; then
 	export CC=clang
 	function attach() {
