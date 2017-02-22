@@ -11,7 +11,7 @@ for t in ${TARGET[@]}; do
     echo $t" is changed"
 done
 
-#sudo apt-get install subversion
+sudo apt-get install subversion
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
