@@ -1,15 +1,15 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 "" bundle installed 
-Bundle 'gmarik/vundle'
-Bundle 'bling/vim-airline'
-Bundle 'vim-airline/vim-airline-themes'
-Bundle 'vim-scripts/SyntaxRange'
-Bundle 'flazz/vim-colorschemes'
-Bundle 'derekwyatt/vim-scala'
-Bundle 'will133/vim-dirdiff'
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-scripts/SyntaxRange'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'will133/vim-dirdiff'
 
 
 let g:airline#extensions#tabline#enabled = 1
