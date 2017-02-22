@@ -89,6 +89,7 @@ fi
 
 # some more ls aliases
 alias ll='ls -al'
+alias lll='ls -luh'
 alias la='ls -A'
 alias l='ls -CF'
 
@@ -120,14 +121,18 @@ fi
 BASE16_SHELL="$HOME/.config/base16-shell/base16-isotope.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
-# export GEM5=$BRANCH/../isa_trial/gem5
 alias gem5alpha="$GEM5/build/ALPHA/gem5.opt $GEM5/configs/example/se.py --cpu-type=MinorCPU --caches --l2cache --l1i_size='16kB' --l1i_assoc=2 --l1d_size='32kB' --l1d_assoc=4 --l2_size='128kB' --l2_assoc=8"
-export BRANCH=~/PAPL_SVN/projects/typedarch/branches/namho/ASPLOS2016
-#export RISCV=~/Projects/ASPLOS2016/rocket-chip/riscv-tools/riscv
-export RISCV=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/ASPLOS2016/rocket-chip/riscv
-#export RISCV=~/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/ASPLOS2016/checkedload/rocket-chip/riscv  
+export BRANCH=~/SVNARC/projects/typedarch/branches/namho/
+export JS=~/SVNARC/projects/typedarch/branches/namho/7102_ORCIM/mozjs17.0.0-typed-tchk
+export LUA=~/SVNARC/projects/typedach/branches/namho/7120_ORCIM/
+export RISCV=/opt/riscv4unified
+#export RISCV=/opt/riscv
+#export RISCV=/opt/riscv4js_old
+#export RISCV=/opt/riscv4lua
+#export RISCV=/opt/riscv_chkld
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 export PATH=$PATH:$RISCV/bin
+export PATH=$PATH:$RISCV/riscv64-unknown-elf/bin
 #export PATH=$PATH:/opt/riscv/bin
 export PATH=/opt/Xilinx/Vivado/2015.2/bin:$PATH
 export PATH=/opt/Xilinx/SDK/2015.2/bin:$PATH
@@ -138,17 +143,9 @@ export SR=svn+ssh://kkjknh2@snsd.skku.edu/SVN/svnroot
 # export PATH=~/PAPL_SVN/projects/typedarch/branches/namho/isa_trial/compilers/alphaev67-unknown-linux-gnu/bin:$PATH
 #export rocket=~/Projects/rocket-chip/
 export LC_CTYPE='en_US.UTF-8'
-export PATH=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/isca2016_jrop/compilers/alphaev67-unknown-linux-gnu/bin:$PATH
 export PATH=~/Project/pypy/:$PATH
-#export GEM5=/home/gimnamho/PAPL_SVN/projects/typedarch/trunks/typedisa/gem5
 #export GEM5=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/typedisa2/gem5
 #export GEM5=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/Python-2.7.2/gem5-stable
 #export GEM5JROP=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/isca2016_Jrop/gem5
-export GEM5=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/isca2016_jrop/gem5
-export GEM5LUA=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/isca2016_jrop/gem5/build/ALPHA/gem5.opt
-
-#export GEM5=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/baseline/gem5
-
-export typeisa=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/typedisa
-#export typeisa=/home/gimnamho/PAPL_SVN/projects/typedarch/trunks/typedisa
-#export PATH=/home/gimnamho/PAPL_SVN/projects/memoization/branches/dy/alphaev67-unknown-linux-gnu/bin:$PATH
+#export GEM5=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/isca2016_jrop/gem5
+#export GEM5LUA=/home/gimnamho/PAPL_SVN/projects/typedarch/branches/namho/isca2016_jrop/gem5/build/ALPHA/gem5.opt
