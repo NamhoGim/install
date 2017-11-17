@@ -1,3 +1,4 @@
+. "$HOME/.bash_profile"
 export PYTHONSTARTUP=~/.pythonrc
 export PYTHONPATH=
 export color_prompt=yes

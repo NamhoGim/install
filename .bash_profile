@@ -167,28 +167,40 @@ fi
 
 	BASE16_SHELL="$HOME/.config/base16-shell/base16-isotope.dark.sh"
 	[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
-    #alias gem5arm="$GEM5/build/ARM/gem5.opt $GEM5/configs/example/se.py --cpu-type=MinorCPU --caches --l2cache --l1i_size='16kB' --l1i_assoc=2 --l1d_size='32kB' --l1d_assoc=4 --l2_size='128kB' --l2_assoc=8"
-    export BASS=/home/gimnamho/SVNARC/projects/typedarch/branches/namho/bass
-    export JSARM=/home/gimnamho/SVNARC/projects/typedarch/branches/namho/bass/mozjs17.0.0_ARM/js/src/arm
-    export GEM5=/home/gimnamho/SVNARC/projects/typedarch/branches/namho/bass/gem5
-	#export BRANCH=~/SVNARC/projects/typedarch/branches/namho/ASPLOS2017
+    alias gem5arm="$GEM5/build/ARM/gem5.opt $GEM5/configs/example/se.py --cpu-type=arm_detailed --cpu-clock='2.0GHz' -n 4 --caches --l1i_size='32kB' --l1i_assoc=2 --l1d_size='32kB' --l1d_assoc=2 --l2cache --l2_size='2MB' --l2_assoc=16"
+    export MY=/home/gimnamho/SVNARC/projects/typedarch/branches/namho
     export SR=svn+ssh://kkjknh2@147.46.219.120/SVN/svnroot/
-    export MY=/home/gimnamho/SVNARC/projects/typedarch/branches/namho/7102_ORCIM
+    #export JSARM=/home/gimnamho/SVNARC/projects/typedarch/branches/namho/bass/mozjs17.0.0_ARM/js/src/arm
+    export dswp=$MY/dswp
+    export GEM5=/home/gimnamho/SVNARC/projects/typedarch/branches/namho/dswp/dswp-hw-tomasulo/gem5
     #export RISCV=/opt/riscv_chkld
+    #export RISCV=/opt/riscv_new
+    #export RISCV=/opt/riscv_scd
+    export RISCV=/opt/riscv_rocc
     #export RISCV=/opt/__test__
     #export RISCV=/opt/riscv_base
     #export RISCV=/opt/riscv_typed
-    export RISCV=/opt/riscv_prop
+    #export RISCV=/opt/riscv_prop
 	#export RISCV=/opt/riscv
 	#export RISCV=/opt/riscv4js_old
 	#export RISCV=/opt/riscv4lua
 	export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    export PATH=$PATH:/opt/arm-unknown-linux-gnueabi/bin
+    #export PATH=/home/gimnamho/arm-unknown-linux-gnueabi/bin:$PATH
+    #export PATH=/home/gimnamho/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/lib:$PATH
+    #export PATH=/home/gimnamho/SVNARC/projects/typedarch/branches/namho/bass/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabi/bin:$PATH
 	export PATH=$PATH:$RISCV/bin
 	export PATH=$PATH:$RISCV/riscv64-unknown-elf/bin
 	export PATH=/opt/Xilinx/Vivado/2015.2/bin:$PATH
+    #export PATH=/opt/Xilinx/Vivado/2016.2/bin:$PATH
+    export PATH=/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64:$PATH
 	export PATH=/opt/Xilinx/SDK/2015.2/bin:$PATH
+    #export PATH=/opt/Xilinx/SDK/2016.2/bin:$PATH
 	export PATH=/opt/Xilinx/SDK/2015.2/gnu/arm/lin/bin:$PATH
+    #export PATH=/opt/Xilinx/SDK/2016.2/gnu/arm/lin/bin:$PATH
 	export PATH=/home/gimnamho/Xilinx_Vivado_SDK_Lin_2015.2_0612_1/tps/lnx64/jre/bin:$PATH
+    #export PATH=/home/gimnamho/Downloads/Xilinx_Vivado_SDK_2016.2_0605_1/tps/lnx64/jre/bin:$PATH
+    #export PATH=$PATH:$HOME/x-tools/arm-unknown-linux-gnueabi/bin
     #export PATH=/home/gimnamho/gcc-linaro-4.9.4-2017.01-x86_64_aarch64-elf/aarch64-elf/bin:$PATH
     #export PATH=/home/gimnamho/gcc-linaro-4.9.4-2017.01-x86_64_aarch64-elf/bin:$PATH
     #export PATH=/home/gimnamho/sysroot-newlib-linaro-2016.11-aarch64-elf:$PATH

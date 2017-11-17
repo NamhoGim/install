@@ -67,7 +67,7 @@ set title
 set showcmd
 set nobackup
 set noswapfile
-set tags+=./tags,tags "check the current folder for tags file
+set tags+=./tags;$HOME ",tags "check the current folder for tags file
 
 ""searching 
 set hlsearch
