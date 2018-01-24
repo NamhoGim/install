@@ -12,6 +12,8 @@ for t in ${TARGET[@]}; do
 done
 
 sudo apt-get install subversion
+sudo apt-get install vim
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
+git clone https://github.com/will133/vim-dirdiff.git ~/.vim/bundle/
+#vim +PluginInstall +qall
