@@ -77,6 +77,9 @@ set smartcase
 
 syntax enable
 colorscheme wombat256
+set colorcolumn=90
+
+hi ColorColumn                      ctermbg=234
 
 "colorscheme default
 au BufRead *
@@ -89,6 +92,7 @@ let t:Uncomment="#"
 let t:CommentEnd=''
 let t:UncommentEnd=''
 let t:Space=" "
+
 
 augroup AutoComment
     au!
@@ -119,3 +123,5 @@ augroup END
 if &diff
     set diffopt+=iwhite
 endif
+au BufNewFile,BufRead *.cu set filetype=cuda
+au BufNewFile,BufRead *.cuh set filetype=cuda
