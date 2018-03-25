@@ -172,22 +172,14 @@ fi
     export SR=svn+ssh://kkjknh2@147.46.219.120/SVN/svnroot/
     #export JSARM=/home/gimnamho/SVNARC/projects/typedarch/branches/namho/bass/mozjs17.0.0_ARM/js/src/arm
     export dswp=$MY/dswp
-    export GEM5=/home/gimnamho/SVNARC/projects/typedarch/branches/namho/dswp/dswp-hw-tomasulo/gem5
-    #export RISCV=/opt/riscv_chkld
-    #export RISCV=/opt/riscv_new
-    #export RISCV=/opt/riscv_scd
+    export GEM5=/home/gimnamho/SVNARC/projects/typedarch/branches/gitae/dswp-o3/gem5
+    export LUA=/home/gimnamho/SVNARC/projects/typedarch/branches/namho/post_dswp/lua-5.3.0/src
     export RISCV=/opt/riscv_rocc
-    #export RISCV=/opt/__test__
-    #export RISCV=/opt/riscv_base
-    #export RISCV=/opt/riscv_typed
-    #export RISCV=/opt/riscv_prop
 	#export RISCV=/opt/riscv
-	#export RISCV=/opt/riscv4js_old
-	#export RISCV=/opt/riscv4lua
 	export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-    export PATH=$PATH:/opt/arm-unknown-linux-gnueabi/bin
-    #export PATH=/home/gimnamho/arm-unknown-linux-gnueabi/bin:$PATH
-    #export PATH=/home/gimnamho/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/lib:$PATH
+    #export PATH=$PATH:/opt/arm-unknown-linux-gnueabi/bin
+    export PATH=/home/gimnamho/arm-unknown-linux-gnueabi/bin:$PATH
+    export PATH=/home/gimnamho/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/lib:$PATH
     #export PATH=/home/gimnamho/SVNARC/projects/typedarch/branches/namho/bass/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabi/bin:$PATH
 	export PATH=$PATH:$RISCV/bin
 	export PATH=$PATH:$RISCV/riscv64-unknown-elf/bin
@@ -204,6 +196,12 @@ fi
     #export PATH=/home/gimnamho/gcc-linaro-4.9.4-2017.01-x86_64_aarch64-elf/aarch64-elf/bin:$PATH
     #export PATH=/home/gimnamho/gcc-linaro-4.9.4-2017.01-x86_64_aarch64-elf/bin:$PATH
     #export PATH=/home/gimnamho/sysroot-newlib-linaro-2016.11-aarch64-elf:$PATH
+    export PATH=/usr/local/cuda/bin:/usr/local/cuda/lib64:/usr/local/cuda/lib:$PATH
+    export CUDA_INSTALL_PATH=/usr/local/cuda
+    export LD_LIBRARY_PATH=/lib:/usr/local/lib:/usr/lib:/usr/local/cuda/lib64:/usr/local/cuda/lib
+    export DLDRAM=/home/gimnamho/SVNARC/projects/dldram
+    export DSWP=/home/gimnamho/SVNARC/projects/typedarch/dswp
+
 elif [[ "$HOSTNAME" == "gimnamho-mac.local" ]]; then
 	export CC=clang
 	function attach() {
@@ -268,3 +266,6 @@ else
 	echo "'$1' is not a vaild file"
 fi
 }
+function dirdiff() {
+ vim -c "DirDiff $1 $2"
+ }
