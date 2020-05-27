@@ -10,7 +10,18 @@ Plugin 'vim-scripts/SyntaxRange'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'will133/vim-dirdiff'
+Plugin 'fatih/vim-go'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'ycm-core/YouCompleteMe'
 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#whitespace#enabled = 0
@@ -30,7 +41,7 @@ augroup Filetype
 	au BufRead,BufNewFile	*.tex						set filetype=tex
 	au BufRead,BufNewFile	*.md						set filetype=markdown
 	au BufRead,BufNewFile	*.{gnuplot,gp}				set filetype=gnuplot
-	" au BufRead,BufNewFile config                    set filetype=config
+	au BufRead,BufNewFile   config                      set filetype=config
 	au BufRead,BufNewFile	*.cl						set filetype=opencl
 	au BufRead,BufNewFile	*.{dat,data,csv}			set filetype=csv
 	au BufRead,BufNewFile	*.gdb						set filetype=gdb
@@ -38,6 +49,7 @@ augroup Filetype
 	au BufRead,BufNewFile	*.bb						set filetype=sh
 	au BufRead,BufNewFile	*.bbclass					set filetype=python
 	au BufRead,BufNewFile	*.isa						set filetype=cpp 
+	au BufRead,BufNewFile	*.go						set filetype=go 
 		\ | exec ":call SyntaxRange#Include('^def', '}}', 'python')"
 	au BufRead,BufNewFile	*.{patch,diff}				set filetype=diff
 		\ | set noexpandtab
@@ -74,6 +86,10 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+
+""MacVim setting
+set gfn=Monaco:h13
+set linespace=2
 
 syntax enable
 colorscheme wombat256
@@ -125,3 +141,4 @@ if &diff
 endif
 au BufNewFile,BufRead *.cu set filetype=cuda
 au BufNewFile,BufRead *.cuh set filetype=cuda
+
