@@ -113,26 +113,26 @@ let t:Space=" "
 augroup AutoComment
     au!
     au FileType c,cpp,verilog,php,javascript,html,idl,opencl,css
-                \ let t:Comment='//'      |
+                \ let t:Comment='//'        |
                 \ let t:Uncomment='\/\/'
     au FileType asm,sh,python,bash,ruby,perl
-                \ let t:Comment='#'     |
+                \ let t:Comment='#'         |
                 \ let t:Uncomment='#'
     au FileType tex
-                \ let t:Comment='%'     |
+                \ let t:Comment='%'         |
                 \ let t:Uncomment='%'   
     au FileType bib
-                \ let t:Comment='%'     |
-                \ let t:Uncomment='%'   |
+                \ let t:Comment='%'         |
+                \ let t:Uncomment='%'       |
                 \ let t:Space=""
     au FileType vim
-                \ let t:Comment='"'     |
+                \ let t:Comment='"'         |
                 \ let t:Uncomment='"'
     au FileType ini,llvm
-                \ let t:Comment=';'     |
+                \ let t:Comment=';'         |
                 \ let t:Uncomment=';'   
     au FileType lua
-                \ let t:Comment='--'     |
+                \ let t:Comment='--'        |
                 \ let t:Uncomment='--'   
 augroup END
 
